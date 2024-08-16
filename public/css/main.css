@@ -48,7 +48,11 @@ Primary use:	FlixTV HTML Template
 	Fonts
 ==============================*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Rubik:ital,wght@0,300;0,400;0,500;1,400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /*==============================
+
 	Common styles
 ==============================*/
 html {
@@ -188,7 +192,7 @@ body::-webkit-scrollbar-thumb {
 	Header
 ==============================*/
 .header {
-  position: fixed;
+  position:fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -213,7 +217,7 @@ body::-webkit-scrollbar-thumb {
   display: block;
   margin-left: 35px;
   height: auto;
-  width: 80px;
+  width: 200px;
 }
 .header__logo img {
   width: 100%;
@@ -241,7 +245,7 @@ body::-webkit-scrollbar-thumb {
 }
 .header__nav-link {
   font-size: 14px;
-  color: #e0e0e0;
+  color: #fafafa;
   line-height: 22px;
   height: 22px;
   display: inline-flex;
@@ -340,6 +344,16 @@ body::-webkit-scrollbar-thumb {
   transition: 0.5s;
   margin-left: 4px;
   margin-top: 1px;
+}
+.active[aria-expanded="true"]{
+  stroke: #e0e0e0;
+  fill: #7e0e0e;
+  width: 4px;
+  height: auto;
+  transition: 0.5s;
+  margin-left: 4px;
+  margin-top: 1px;
+  color: #1da1f2;
 }
 .header__nav-menu a:hover {
   color: #2f80ed;
@@ -459,6 +473,7 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   opacity: 0.7;
 }
+
 .header__form-close svg {
   width: 16px;
   height: auto;
@@ -714,16 +729,13 @@ body::-webkit-scrollbar-thumb {
   background-color: #2f80ed;
 }
 .home__card {
-  display: block;
-  width: 290px;
+  /* width: 100%; */
   transition: 0.5s;
   overflow: hidden;
-  position: relative;
   border-radius: 16px;
 }
 .home__card img {
-  position: relative;
-  width: 100%;
+  /* width: 100%; */
   z-index: 1;
   transition: 0.5s;
 }
@@ -5085,6 +5097,14 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 576px) {
   .page-404__content {
     padding: 40px;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .header__logo{
+    width: 130px;
+    height: auto;
+
   }
 }
 /*==============================
